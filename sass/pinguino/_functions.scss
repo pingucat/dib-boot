@@ -1,0 +1,33 @@
+//$secondary-color: #4a4a4a;
+@function color--secondary($color:
+  $color--primary) {
+   @return adjust-color($color, $hue: 163, $saturation: -39, $lightness: -2.7);
+}
+@function color--tertiary($color:
+  $color--primary) {
+  @return adjust-color($color, $hue: -163, $saturation: -39, $lightness: -2.7);
+}
+@function color--black($color:
+  $color--primary) {
+  @return adjust-color($color, $hue: 10, $saturation: 10, $lightness: -50);
+}
+
+@function color--white($color:
+  $color--primary) {
+  @return adjust-color($color, $hue: -1.8, $saturation: -20, $lightness: 50);
+}
+
+@debug $secondary-color;
+@debug $tertiary-color;
+//197.8125
+@debug hue($primary-color);
+//39.50617
+@debug saturation($primary-color);
+//31.76471
+@debug lightness($primary-color);
+//34.8125
+@debug hue($secondary-color);
+//78.50617
+@debug saturation($secondary-color);
+//34.46471
+@debug lightness($secondary-color);

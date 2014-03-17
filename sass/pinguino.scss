@@ -1,48 +1,41 @@
-$primary-color: #315e71;
-//$secondary-color: #4a4a4a;
-$secondary-color: adjust-color($primary-color, $hue: 163, $saturation: -39, $lightness: -2.7);
-//$tertiary-color: #ffffff;
-$tertiary-color: adjust_hue($primary-color, $hue: -163);
-$black: #081013;
-$white: #e1f6ff;
-
-
-@debug $secondary-color;
-@debug $tertiary-color;
-//197.8125
-@debug hue($primary-color);
-//39.50617
-@debug saturation($primary-color);
-//31.76471
-@debug lightness($primary-color);
-//34.8125
-@debug hue($secondary-color);
-//78.50617
-@debug saturation($secondary-color);
-//34.46471
-@debug lightness($secondary-color);
+@import "pinguino/functions";
+@import "pinguino/variables";
 
 body {
   background-color: $primary-color;
   color: $secondary-color;
-  font: 12px "Verdana", "Helvetica", sans-serif;
+  font: "Verdana", "Helvetica", sans-serif;
+  font-size: $font--base-size;
   width: 80%;
   margin: auto;
 }
 
-h1, h2 {
-  color: #FFBD6D;
+h2 {
+  color: $color-tertiary;
  }
+
+ @for $i from 1 through 6 {
+    @debug $i;
+    h#{$i} {
+      font-size: $font--max-size - (.25em * $i);
+      line-height: $font--header-line-height;
+    }
+ }
+
 
 //$pinguino-color: #cf39ea;
 //$complement-color: adjust_hue($pinguino-color, 180);
 
 //a:link    { $complement-color}
 
-a:link    { color: $tertiary-color;}
-a:visited { color: #B27429;}
-a:hover   { text-shadow: 0 0 2px #999;}
-a:active  { padding-top: 2px;}
+//a: {
+//  color: $color--secondary;
+
+  //&:hover {
+  //color: mix($color--black, $color--secondary, 30%);
+//  }
+
+//}
 
 figure {
   float: right;

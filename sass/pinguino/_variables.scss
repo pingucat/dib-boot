@@ -1,0 +1,17 @@
+$color--primary: #315e71;
+$color--secondary: color--secondary();
+$color--tertiary: color--tertiary();
+$color--white: color--white();
+$color--black: color--black();
+
+
+//1em == 16px == 100%   roughly
+$font--base-size: 1.5em;
+$font--base-line-height: 1.618em;
+$font--header-line-height: 1em;
+$font--max-size: 2em;
+
+
+$container--max-width:596px;
+$border--thin: 1px solid mix($color--white, $color--primary, 90%);
+
