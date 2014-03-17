@@ -1,6 +1,30 @@
+$primary-color: #315e71;
+//$secondary-color: #4a4a4a;
+$secondary-color: adjust-color($primary-color, $hue: 163, $saturation: -39, $lightness: -2.7);
+//$tertiary-color: #ffffff;
+$tertiary-color: adjust_hue($primary-color, $hue: -163);
+$black: #081013;
+$white: #e1f6ff;
+
+
+@debug $secondary-color;
+@debug $tertiary-color;
+//197.8125
+@debug hue($primary-color);
+//39.50617
+@debug saturation($primary-color);
+//31.76471
+@debug lightness($primary-color);
+//34.8125
+@debug hue($secondary-color);
+//78.50617
+@debug saturation($secondary-color);
+//34.46471
+@debug lightness($secondary-color);
+
 body {
-  background-color: #004E73;
-  color: #6DD0FF;
+  background-color: $primary-color;
+  color: $secondary-color;
   font: 12px "Verdana", "Helvetica", sans-serif;
   width: 80%;
   margin: auto;
@@ -15,7 +39,7 @@ h1, h2 {
 
 //a:link    { $complement-color}
 
-a:link    { color: #FFBD6D;}
+a:link    { color: $tertiary-color;}
 a:visited { color: #B27429;}
 a:hover   { text-shadow: 0 0 2px #999;}
 a:active  { padding-top: 2px;}
@@ -28,7 +52,7 @@ img {
  width: 80%;
   height: 80%;
   padding:1px;
-  border:1px solid #6DD0FF;
+  border:1px solid $secondary-color;
 }
 
 
